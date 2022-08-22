@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eeeeee;
+    font-family: sans-serif;
+    padding-top: 50px;
+}
+.container{
+    border-radius: 10px;
+    max-width: 550px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 2px 2px 1px -4px rgba(0, 0, 0, 0.21);
+}
+.header-list{
+    background: rgb(255,0,0);
+    background: linear-gradient(317deg, #eea390 0%, #eb796f 43%, #eb796f 100%);
+    padding: 10px;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.header-list h1{
+    text-align: center;
+    font-size: 36px;
+}
+.header-list h3{
+    text-align: center;
+}
+.header-list .container-logout-button{
+    width: 100%;
+    text-align: right;
+}
+.header-list .container-logout-button a{
+    text-decoration: none;
+    color: #111;
+}
+.title-container{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.title-container input{
+    padding:8px 10px;
+    outline: none;
+    border: 1px solid #eea390;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.title-container button{
+    padding: 8px 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #eb796f;
+    border-radius: 5px;
+    border:none;
+}
+.title-container a{
+    background-color: #eb796f;
+    padding:5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+.container-task-list{
+    padding: 10px;
+}
+.container-task{
+    background-color:#eee;
+    padding: 10px;
+    margin: 10px;
+}
+.container-button-delete{
+    width: 100%;
+    text-align: right;
+}
+.container-button-delete a{
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #eb796f;
+}
+.link-update{
+    text-decoration: none;
+    font-size: 20px;
+}
+.title-task{
+    color: #eb796f;
+}
+.text-line-middle{
+    color: #eea390;
+    text-decoration: line-through;
+}
+.form-generic{
+    width: 100%;
+    padding: 20px;
+}
+.form-generic label{
+    display: block !important;
+    font-size: 20px;
+}
+.form-generic input[type="text"], textarea, select{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #eea390;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+}
+.form-generic button{
+    padding:10px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px auto;
+    color: #fff;
+    background-color: #eb796f;
+    border: none;
+    cursor:pointer;
+}
+.form-generic .info{
+    text-align: center;
+    color: #bbb;
+}
+.form-generic li{
+    list-style: none;
+    color: #eb796f;
+    font-weight: bold;
+    margin: 2px;
+}
+.form-generic .info a{
+    text-decoration: none;
+    color: #eb796f;
+}
+.btn-confirm{
+    margin-left: auto;
+    padding:5px !important;
+    width:auto !important;
+}
+.cancel{
+    background-color: #eea390;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+}

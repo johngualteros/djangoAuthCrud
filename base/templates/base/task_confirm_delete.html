@@ -1,0 +1,13 @@
+{% extends 'base/main.html' %}
+{% block title %}Confirm{% endblock %}
+{% block content %}
+    <div class="header-list">
+        <h3>Please Confirm</h3>
+    </div>
+    <form method="POST" class="form-generic">
+        {% csrf_token %}
+        <p>Are you sure? you really want to delete this task ? "{{ task }}"</p>
+        <button type="submit" class="btn-confirm">Yes Delete</button>
+        <a href="{% url 'tasks' %}" class="cancel">No Cancel</a>
+    </form>
+{% endblock %}

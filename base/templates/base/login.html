@@ -1,0 +1,13 @@
+{% extends 'base/main.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="header-list">
+        <h1>Login</h1>
+    </div>
+    <form method="POST" class="form-generic">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+        <p class="info">If you don´t have account, you can <a href="{% url 'register' %}">register now</a></p>
+    </form>
+{% endblock %}

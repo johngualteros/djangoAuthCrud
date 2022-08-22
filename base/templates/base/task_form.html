@@ -1,0 +1,16 @@
+{% extends 'base/main.html' %}
+{% block title %}Add Task{% endblock %}
+{% block content %}
+
+    <div class="header-list">
+        <div class="container-logout-button">
+            <a href="{% url 'tasks' %}">Go Back</a>
+        </div>
+        <h3>Task Form</h3>
+    </div>
+    <form method="POST" class="form-generic">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add New Task</button>
+    </form>
+{% endblock %}

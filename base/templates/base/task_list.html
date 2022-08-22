@@ -1,0 +1,40 @@
+{% extends 'base/main.html' %}
+{% block title %}List My Tasks{% endblock %}
+{% block content %}
+    <div class="header-list">
+        <div class="container-logout-button">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+        <h1>Welcome {{ request.user|title }}</h1>
+        <h3>You have <i>{{ count }} incomplete tasks</i></h3>
+    </div>
+    <div class="title-container">
+        <div>
+          <form method="GET">
+              <input type="text" name="search-area" id="search-area" placeholder="Search..." value="{{ search_input }}">
+              <button type="submit">Search</button>
+          </form>
+        </div>
+        <a href="{% url 'taskAdd' %}"><i class="bi bi-plus-lg"></i></a>
+    </div>
+
+    <div class="container-task-list">
+        {% for task in tasks %}
+            <div class="container-task">
+
+                <div class="container-button-delete">
+                    <a href="{% url 'taskDelete' task.id %}"><i class="bi bi-x-lg"></i></a>
+                </div>
+                <a href="{% url 'taskUpdate' task.id %}" class="link-update">
+                {% if task.complete %}
+                    <h3 class="text-line-middle"> 🚀 {{ task.title }}</h3>
+                    {% else %}
+                    <h3 class="title-task"> ⏱️ {{ task.title }}</h3>
+                {% endif %}
+                </a>
+            </div>
+            {% empty %}
+            <h3>No Tasks Found</h3>
+        {% endfor %}
+    </div>
+{% endblock %}
